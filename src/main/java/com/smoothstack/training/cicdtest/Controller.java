@@ -10,7 +10,8 @@ public class Controller {
 
 	@RequestMapping("/")
 	public ResponseEntity<String> test() {
-		return new ResponseEntity<String>("Hello from the backend", HttpStatus.OK);
+		String result = String.join("\n", "I'm a Spring Boot app" + System.getenv("VARIABLE"));
+		return new ResponseEntity<String>(result, HttpStatus.OK);
 	}
 
 }
