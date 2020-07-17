@@ -10,7 +10,7 @@ public class Controller {
 
 	@RequestMapping("/")
 	public ResponseEntity<String> test() {
-		String result = String.join("\n", "I'm a Spring Boot app.", "I'm a GitHub webhook.", System.getenv("VARIABLE"));
+		String result = String.join("\n", "I'm a Spring Boot app.", "I'm a GitHub webhook. ", System.getenv("VARIABLE"));
 		return new ResponseEntity<String>(result, HttpStatus.OK);
 	}
 
